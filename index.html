@@ -98,6 +98,17 @@
         </div>
     </div>
 
+    <script>
+      // Prevent flash of unstyled content by applying theme immediately
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const isDark = savedTheme ? savedTheme === 'dark' : systemDark;
+        document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        document.body.classList.toggle('dark-theme', isDark);
+        document.body.classList.toggle('light-theme', !isDark);
+      })();
+    </script>
     <script type="module" src="/src/scripts/main.ts"></script>
 </body>
 </html>

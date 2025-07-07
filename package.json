@@ -16,7 +16,7 @@
     "gh-pages": "^6.3.0",
     "terser": "^5.43.1",
     "typescript": "~5.8.3",
-    "vite": "^7.0.2"
+    "vite": "^6.0.1"
   },
   "optionalDependencies": {
     "gh-pages": "^6.1.1"
