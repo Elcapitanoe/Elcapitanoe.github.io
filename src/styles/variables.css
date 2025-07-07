@@ -1,0 +1,89 @@
+:root {
+  /* Light theme colors */
+  --bg-primary: #f5f3f0;
+  --bg-secondary: #ede8e3;
+  --bg-paper: #fefefe;
+  --text-primary: #2c3e50;
+  --text-secondary: #5a6c7d;
+  --text-muted: #8492a6;
+  --text-handwritten: #1a365d;
+  --border-color: #e1e8ed;
+  --shadow-light: rgba(0, 0, 0, 0.08);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-paper: rgba(0, 0, 0, 0.12);
+  --accent-color: #3498db;
+  --accent-hover: #2980b9;
+  --paper-lines: rgba(0, 0, 0, 0.1);
+  
+  /* Light theme cursor */
+  --cursor-default: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="%23333" stroke-width="2" opacity="0.6"/><circle cx="10" cy="10" r="2" fill="%23333" opacity="0.8"/></svg>'), auto;
+  --cursor-pointer: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 2l8 5-3 1 5 8-2 1-5-8-1 3z" fill="%23333" opacity="0.8"/></svg>'), pointer;
+  
+  /* Light theme scrollbar */
+  --scrollbar-track: #ede8e3;
+  --scrollbar-border: #e1e8ed;
+  --scrollbar-thumb: linear-gradient(45deg, #3498db, #2980b9);
+  --scrollbar-thumb-border: #fefefe;
+  --scrollbar-thumb-hover: linear-gradient(45deg, #2980b9, #3498db);
+  --scrollbar-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  --scrollbar-shadow-hover: inset 0 0 5px rgba(0, 0, 0, 0.3);
+  
+  /* Selection colors */
+  --selection-bg: rgba(52, 152, 219, 0.3);
+  --selection-text: #2c3e50;
+  
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-handwritten: 'Kalam', 'Comic Sans MS', cursive;
+  --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-medium: 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-paper: #2a2a2a;
+  --text-primary: #e6e6e6;
+  --text-secondary: #b8bcc8;
+  --text-muted: #8a8f98;
+  --text-handwritten: #d4d4d4;
+  --border-color: #404040;
+  --shadow-light: rgba(0, 0, 0, 0.3);
+  --shadow-medium: rgba(0, 0, 0, 0.4);
+  --shadow-paper: rgba(0, 0, 0, 0.5);
+  --accent-color: #4a9eff;
+  --accent-hover: #357abd;
+  --paper-lines: rgba(255, 255, 255, 0.1);
+  
+  /* Dark theme cursor - bright and visible */
+  --cursor-default: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="%23ffffff" stroke-width="2" opacity="0.9"/><circle cx="10" cy="10" r="2" fill="%23ffffff" opacity="1"/></svg>'), auto;
+  --cursor-pointer: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8 2l8 5-3 1 5 8-2 1-5-8-1 3z" fill="%23ffffff" opacity="0.9"/></svg>'), pointer;
+  
+  /* Dark theme scrollbar - bright and glowing */
+  --scrollbar-track: #2d2d2d;
+  --scrollbar-border: #404040;
+  --scrollbar-thumb: linear-gradient(45deg, #4a9eff, #66b3ff);
+  --scrollbar-thumb-border: #2a2a2a;
+  --scrollbar-thumb-hover: linear-gradient(45deg, #66b3ff, #80ccff);
+  --scrollbar-shadow: inset 0 0 3px rgba(255, 255, 255, 0.1), 0 0 6px rgba(74, 158, 255, 0.3);
+  --scrollbar-shadow-hover: inset 0 0 5px rgba(255, 255, 255, 0.2), 0 0 10px rgba(74, 158, 255, 0.5);
+  
+  /* Dark theme selection */
+  --selection-bg: rgba(74, 158, 255, 0.4);
+  --selection-text: #ffffff;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "domi-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "https://elcapitanoe.github.io/domi-portfolio",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "deploy:vercel": "vercel --prod",
+    "deploy:netlify": "netlify deploy --prod --dir=dist",
+    "deploy:gh-pages": "npm run build && gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.2"
+  },
+  "optionalDependencies": {
+    "gh-pages": "^6.1.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "keywords": [
+    "portfolio",
+    "vite",
+    "typescript",
+    "responsive",
+    "dark-mode"
+  ],
+  "author": "Domi Adiwijaya (@Elcapitanoe)",
+  "description": "Personal portfolio website with paper-style design and dark/light theme toggle"
+}

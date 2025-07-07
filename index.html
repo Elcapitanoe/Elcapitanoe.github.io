@@ -1,7 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <title>Domi Adiwijaya</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/main.css">
+</head>
 <body>
-<h1>Domi Adiwijaya</h1>
-<p>Initial Page</p>
+    <div class="container">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon">🌙</span>
+        </button>
+
+        <div class="paper-sheet">
+            <div class="paper-content">
+                <header class="header">
+                    <div class="header-content">
+                        <h1 class="name">Domi Adiwijaya</h1>
+                        <p class="alias">@Elcapitanoe</p>
+                    </div>
+                </header>
+
+                <main class="main">
+                    <section class="bio-section">
+                        <h2 class="section-title">About Me</h2>
+                        <div class="bio-content">
+                            <p class="bio-text">
+                                I'm into tech and homelab stuff. I'm mostly just curious about how things work and what I can build with them. I enjoy trying out new tools, setting things up, sometimes breaking them, and figuring things out as I go. For me, it's really about enjoying the process of learning and experimenting, not chasing perfection.
+                            </p>
+                            <div class="hobby-tag">
+                                <span class="tag-icon">⚡</span>
+                                <span>Tech & HomeLab Enthusiast</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="skills-section">
+                        <h2 class="section-title">My Interests</h2>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <span class="skill-icon">🖥️</span>
+                                <span>System Administration</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">🏠</span>
+                                <span>Home Automation</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">🔧</span>
+                                <span>Hardware Tinkering</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">📡</span>
+                                <span>Networking</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">☁️</span>
+                                <span>Cloud Computing</span>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-icon">🐧</span>
+                                <span>Linux Systems</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="contact-section">
+                        <h2 class="section-title">Let's Connect</h2>
+                        <div class="contact-grid">
+                            <a href="mailto:hello@domiadi.com" class="contact-link">
+                                <span class="contact-icon">📧</span>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/domiadiwijaya" class="contact-link">
+                                <span class="contact-icon">💼</span>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/Elcapitanoe" class="contact-link">
+                                <span class="contact-icon">🐙</span>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://x.com/DomiAdiwijaya" class="contact-link">
+                                <span class="contact-icon">🐦</span>
+                                <span>Twitter</span>
+                            </a>
+                        </div>
+                    </section>
+                </main>
+
+                <footer class="footer">
+                    <p>&copy; 2025 Domi Adiwijaya. Built with passion for technology.</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/scripts/main.ts"></script>
 </body>
 </html>

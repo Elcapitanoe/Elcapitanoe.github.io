@@ -1,0 +1,24 @@
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? '/domi-portfolio/' : '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false,
+    minify: 'terser',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      }
+    }
+  },
+  server: {
+    port: 5173,
+    host: true
+  },
+  preview: {
+    port: 4173,
+    host: true
+  }
+})

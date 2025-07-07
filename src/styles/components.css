@@ -1,0 +1,195 @@
+/* Theme Toggle */
+.theme-toggle {
+  position: fixed;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--bg-paper);
+  border: 2px solid var(--border-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: var(--cursor-pointer);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 12px var(--shadow-medium);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) rotate(10deg);
+  box-shadow: 0 6px 20px var(--shadow-medium);
+  border-color: var(--accent-color);
+}
+
+.theme-icon {
+  font-size: 1.4rem;
+  display: block;
+}
+
+/* Paper Sheet */
+.paper-sheet {
+  background: var(--bg-paper);
+  border-radius: var(--radius-lg);
+  box-shadow: 
+    0 4px 6px var(--shadow-light),
+    0 10px 20px var(--shadow-medium),
+    0 20px 40px var(--shadow-paper);
+  position: relative;
+  overflow: hidden;
+  margin: var(--spacing-lg) 0;
+  transform: rotate(-0.5deg);
+  transition: all var(--transition-medium);
+}
+
+.paper-sheet::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60px;
+  bottom: 0;
+  width: 2px;
+  background: #ff6b6b;
+  opacity: 0.6;
+}
+
+.paper-sheet::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(
+      transparent,
+      transparent 29px,
+      var(--paper-lines) 30px,
+      var(--paper-lines) 31px
+    );
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.paper-sheet:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 
+    0 8px 12px var(--shadow-light),
+    0 20px 40px var(--shadow-medium),
+    0 40px 80px var(--shadow-paper);
+}
+
+/* Section Titles */
+.section-title {
+  font-family: var(--font-handwritten);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: var(--spacing-md);
+  color: var(--text-handwritten);
+  position: relative;
+  transform: rotate(-0.5deg);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color);
+  border-radius: 2px;
+  transform: rotate(1deg);
+}
+
+/* Hobby Tag */
+.hobby-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: rgba(52, 152, 219, 0.1);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-handwritten);
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  border: 2px dashed var(--accent-color);
+  width: fit-content;
+  transform: rotate(-0.5deg);
+  margin-left: var(--spacing-md);
+}
+
+.tag-icon {
+  font-size: 1.2rem;
+}
+
+/* Skill Items */
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  font-family: var(--font-handwritten);
+  font-size: 1.1rem;
+  color: var(--text-handwritten);
+  transform: rotate(0.3deg);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: var(--cursor-pointer);
+}
+
+.skill-item:nth-child(even) {
+  transform: rotate(-0.3deg);
+}
+
+.skill-item:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skill-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* Contact Links */
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm);
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--text-handwritten);
+  transition: all var(--transition-fast);
+  font-family: var(--font-handwritten);
+  font-size: 1.1rem;
+  transform: rotate(0.5deg);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: var(--cursor-pointer);
+}
+
+.contact-link:nth-child(even) {
+  transform: rotate(-0.5deg);
+}
+
+.contact-link:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: rotate(0deg) translateY(-3px);
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-icon {
+  font-size: 1.3rem;
+}

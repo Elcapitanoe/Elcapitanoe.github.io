@@ -1,0 +1,109 @@
+/* Container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-xl);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+
+.paper-content {
+  padding: var(--spacing-xl);
+  position: relative;
+  z-index: 2;
+  margin-left: 40px;
+}
+
+/* Header */
+.header {
+  margin-bottom: var(--spacing-lg);
+}
+
+.header-content {
+  position: relative;
+  text-align: left;
+  padding: var(--spacing-lg) 0;
+}
+
+.name {
+  font-family: var(--font-handwritten);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 400;
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-handwritten);
+  transform: rotate(-1deg);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.alias {
+  font-family: var(--font-handwritten);
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  transform: rotate(0.5deg);
+  margin-left: var(--spacing-md);
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* Sections */
+section {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Bio Section */
+.bio-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.bio-text {
+  font-family: var(--font-handwritten);
+  font-size: 1.3rem;
+  color: var(--text-handwritten);
+  line-height: 1.8;
+  transform: rotate(0.2deg);
+  text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+/* Contact Section */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+/* Footer */
+.footer {
+  margin-top: var(--spacing-xl);
+  text-align: center;
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.footer p {
+  font-family: var(--font-handwritten);
+  color: var(--text-muted);
+  font-size: 1rem;
+  transform: rotate(-0.3deg);
+}
