@@ -1,11 +1,7 @@
 export class ThemeManager {
-  private isDark: boolean;
-  private toggleButton: HTMLButtonElement;
-  private themeIcon: HTMLSpanElement;
-
   constructor() {
-    this.toggleButton = document.getElementById('themeToggle') as HTMLButtonElement;
-    this.themeIcon = this.toggleButton.querySelector('.theme-icon') as HTMLSpanElement;
+    this.toggleButton = document.getElementById('themeToggle');
+    this.themeIcon = this.toggleButton.querySelector('.theme-icon');
     
     // Check for saved theme preference or default to system preference
     const savedTheme = localStorage.getItem('theme');
@@ -19,7 +15,7 @@ export class ThemeManager {
     this.init();
   }
 
-  private init(): void {
+  init() {
     this.applyTheme();
     this.toggleButton.addEventListener('click', () => this.toggleTheme());
     
@@ -32,13 +28,13 @@ export class ThemeManager {
     });
   }
 
-  private toggleTheme(): void {
+  toggleTheme() {
     this.isDark = !this.isDark;
     this.applyTheme();
     localStorage.setItem('theme', this.isDark ? 'dark' : 'light');
   }
 
-  private applyTheme(): void {
+  applyTheme() {
     // Apply theme immediately to prevent flash
     document.documentElement.setAttribute('data-theme', this.isDark ? 'dark' : 'light');
     this.themeIcon.textContent = this.isDark ? '☀️' : '🌙';

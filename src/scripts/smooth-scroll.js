@@ -3,17 +3,17 @@ export class SmoothScroll {
     this.init();
   }
 
-  private init(): void {
+  init() {
     // Add smooth scroll behavior for any future navigation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', this.handleSmoothScroll);
     });
   }
 
-  private handleSmoothScroll(e: Event): void {
+  handleSmoothScroll(e) {
     e.preventDefault();
-    const target = e.currentTarget as HTMLAnchorElement;
-    const targetElement = document.querySelector(target.getAttribute('href') as string);
+    const target = e.currentTarget;
+    const targetElement = document.querySelector(target.getAttribute('href'));
     
     if (targetElement) {
       targetElement.scrollIntoView({
