@@ -19,6 +19,8 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "astro",
     "noUncheckedSideEffectImports": true
   },
   "include": ["src"]

@@ -1,0 +1,84 @@
+---
+import '../styles/fonts.css';
+import '../styles/main.css';
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    <meta name="theme-color" content="#fefefe" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#2a2a2a" media="(prefers-color-scheme: dark)">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://elcapitanoe.github.io/">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://elcapitanoe.github.io/">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+
+    <link rel="canonical" href="https://elcapitanoe.github.io/">
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+
+    <script is:inline>
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          const isDark = savedTheme ? savedTheme === 'dark' : systemDark;
+          if (document.documentElement) {
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+          }
+          if (document.body) {
+            document.body.classList.toggle('dark-theme', isDark);
+            document.body.classList.toggle('light-theme', !isDark);
+          }
+        } catch (e) {
+          if (document.documentElement) {
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        }
+      })();
+    </script>
+    <script type="application/ld+json" set:html={`
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Domi Adiwijaya",
+      "alternateName": "@Elcapitanoe",
+      "url": "https://elcapitanoe.github.io/",
+      "jobTitle": "Tech & HomeLab Enthusiast",
+      "sameAs": [
+        "https://www.linkedin.com/in/domiadiwijaya",
+        "https://github.com/Elcapitanoe",
+        "https://x.com/DomiAdiwijaya"
+      ]
+    }
+    `} />
+</head>
+<body>
+    <div class="container">
+        <slot />
+    </div>
+
+    <script>
+      import '../scripts/main.js';
+    </script>
+</body>
+</html>

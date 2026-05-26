@@ -4,19 +4,16 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "deploy:vercel": "npm run build",
     "deploy:gh-pages": "npm run build && gh-pages -d dist"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
-    "terser": "^5.43.1",
-    "vite": "^6.0.1"
-  },
-  "optionalDependencies": {
-    "gh-pages": "^6.1.1"
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.3.7",
+    "gh-pages": "^6.3.0"
   },
   "engines": {
     "node": ">=18.0.0",
@@ -30,5 +27,8 @@
     "dark-mode"
   ],
   "author": "Domi Adiwijaya (@Elcapitanoe)",
-  "description": "Personal portfolio website with paper-style design and dark/light theme toggle"
+  "description": "Personal portfolio website with paper-style design and dark/light theme toggle",
+  "optionalDependencies": {
+    "gh-pages": "^6.1.1"
+  }
 }

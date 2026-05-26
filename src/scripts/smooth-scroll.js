@@ -4,7 +4,7 @@ export class SmoothScroll {
   }
 
   init() {
-    // Add smooth scroll behavior for any future navigation
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', this.handleSmoothScroll);
     });

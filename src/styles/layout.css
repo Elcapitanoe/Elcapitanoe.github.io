@@ -1,4 +1,4 @@
-/* Container */
+
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -17,7 +17,6 @@
   margin-left: 40px;
 }
 
-/* Header */
 .header {
   margin-bottom: var(--spacing-lg);
 }
@@ -48,7 +47,6 @@
   margin-left: var(--spacing-md);
 }
 
-/* Main Content */
 .main {
   flex: 1;
   display: flex;
@@ -56,12 +54,10 @@
   gap: var(--spacing-lg);
 }
 
-/* Sections */
 section {
   margin-bottom: var(--spacing-md);
 }
 
-/* Bio Section */
 .bio-content {
   display: flex;
   flex-direction: column;
@@ -77,7 +73,6 @@ section {
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.1);
 }
 
-/* Skills Section */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -85,7 +80,6 @@ section {
   margin-top: var(--spacing-md);
 }
 
-/* Contact Section */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -93,7 +87,6 @@ section {
   margin-top: var(--spacing-md);
 }
 
-/* Footer */
 .footer {
   margin-top: var(--spacing-xl);
   text-align: center;

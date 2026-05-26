@@ -6,7 +6,7 @@
 
 html {
   scroll-behavior: smooth;
-  /* Allow users to zoom while preventing unwanted zoom triggers */
+  
   touch-action: pan-x pan-y;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -24,19 +24,18 @@ body {
   min-height: 100vh;
   position: relative;
   cursor: var(--cursor-default);
-  /* Prevent unwanted text selection while allowing intentional selection */
+  
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  /* Prevent double-tap zoom while allowing pinch zoom */
+  
   touch-action: pan-x pan-y;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Allow text selection for content areas */
 .bio-text,
 .footer p,
 .name,
@@ -68,7 +67,6 @@ body::before {
   z-index: 0;
 }
 
-/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -95,24 +93,20 @@ body::before {
   background: var(--scrollbar-track);
 }
 
-/* Firefox scrollbar */
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
-/* Custom cursor for interactive elements */
 a, button, .skill-item, .contact-link {
   cursor: var(--cursor-pointer);
 }
 
-/* Text selection */
 ::selection {
   background: var(--selection-bg);
   color: var(--selection-text);
 }
 
-/* Prevent zoom on input focus (iOS Safari) while maintaining accessibility */
 input, textarea, select {
   font-size: 16px !important;
   -webkit-appearance: none;
@@ -120,13 +114,11 @@ input, textarea, select {
   appearance: none;
 }
 
-/* Prevent unwanted touch behaviors while maintaining accessibility */
 * {
   -webkit-touch-callout: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Disable unwanted text selection by default */
 * {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -134,7 +126,6 @@ input, textarea, select {
   user-select: none;
 }
 
-/* Re-enable text selection for readable content */
 p, h1, h2, h3, h4, h5, h6, span {
   -webkit-user-select: text;
   -moz-user-select: text;
